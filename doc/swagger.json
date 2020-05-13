@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.1",
     "info": {
-        "title": "Swagger Petstore",
+        "title": "S4U Rest API",
         "description": "API REST for user and ticket management on S4U App",
         "termsOfService": "",
         "contact": {
@@ -13,14 +13,14 @@
             "name": "Apache 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
         },
-        "version": "1.0.0"
+        "version": "0.0.1"
     },
     "servers": [{
             "url": "http://localhost:3001/v1/s4uapi",
             "description": "Local Dev Server"
         },
         {
-            "url": "https://s4uapi.heroku.com/v1/s4uapi",
+            "url": "https://s4uapi.herokuapp.com/v1/s4uapi",
             "description": "Cloud Dev Server"
         }
     ],
