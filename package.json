@@ -1,0 +1,20 @@
+{
+    "name": "s4u-rest-api",
+    "version": "1.0.0",
+    "description": "Rest API for user and ticket management on S4U app",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "author": "Julian Avellaneda",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mongoose": "^5.9.13",
+        "swagger-ui-express": "^4.1.4"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.3"
+    }
+}
