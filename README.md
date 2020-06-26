@@ -8,12 +8,12 @@ S4U is a custom API Rest for user and ticket management on S4U app. 💻🖥
 
 ### Tickets
 
-- [ ] `createTicket()` function not implemented.
-- [ ] `getTickets()` function not implemented.
-- [ ] `getTicketById()` function not implemented.
-- [ ] `getTicketsByOwnerUser()` function not implemented.
-- [ ] `getTicketsByAssignedUser()` function not implemented.
-- [ ] `updateTicket()` function not implemented.
+- [x] `createTicket()` function implemented ✔.
+- [x] `getTickets()` function implemented ✔.
+- [x] `getTicketById()` function not implemented ✔.
+- [ ] `getTicketsByOwnerUser()` function not implemented ✖.
+- [ ] `getTicketsByAssignedUser()` function not implemented ✖.
+- [ ] `updateTicket()` function not implemented ✖.
 
 ## API Documentation
 

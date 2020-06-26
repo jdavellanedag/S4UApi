@@ -2,6 +2,12 @@ const express = require('express');
 const app = express();
 const controller = require('./controllers/ticket.controller');
 
+/**
+ * 
+ * Routing configuration for
+ * Ticket management
+ * 
+ */
 app.post('', (req, res) => controller.createTicket(req, res));
 app.get('', (req, res) => controller.getTickets(req, res));
 app.get('/:id', (req, res) => controller.getTicketById(req, res));

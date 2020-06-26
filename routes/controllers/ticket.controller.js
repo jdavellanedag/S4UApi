@@ -1,28 +1,49 @@
-// Create Ticket
+const ticketCore = require('../../core/ticket.core');
+
+/**  Create Ticket*/
 
 const createTicket = async(req, res) => {
-    res.json({
-        message: 'Ticekt POST'
-    })
+    let ticket = req.body;
+    ticketCore.createTicket(ticket, (err, data) => {
+        if (err) {
+            return res.status(405).json(err);
+        }
+        res.status(data.code).json(data);
+    });
 }
 
-// Get all ticekts
+/**  Get all ticekts*/
 
 const getTickets = async(req, res) => {
-    res.json({
-        message: 'Ticket GET'
-    })
+
+    let options = null;
+    if (req.query.isPageable) {
+        let limit = Number(req.query.limit) || 10;
+        let page = Number(req.query.page) || 0;
+        options = { limit, page }
+    }
+
+    ticketCore.getTickets(options, (err, data) => {
+        if (err) {
+            return res.status(err.code).json(err);
+        }
+        res.status(data.code).json(data);
+    });
 }
 
-// Get Ticket by ID
+/**  Get Ticket by ID*/
 
 const getTicketById = async(req, res) => {
-    res.json({
-        message: `Ticket GET: ${req.params.id}`
-    })
+    let id = req.params.id;
+    ticketCore.getTicketById(id, (err, data) => {
+        if (err) {
+            return res.status(err.code).json(err);
+        }
+        res.status(data.code).json(data);
+    });
 }
 
-// Get Tickets by owner user
+/**  Get Tickets by owner user*/
 
 const getTicketsByOwnerUser = async(req, res) => {
     res.json({
@@ -30,7 +51,7 @@ const getTicketsByOwnerUser = async(req, res) => {
     })
 }
 
-// Get Tickets by assigned user
+/**  Get Tickets by assigned user*/
 
 const getTicketsByAssignedUser = async(req, res) => {
     res.json({
@@ -38,14 +59,13 @@ const getTicketsByAssignedUser = async(req, res) => {
     })
 }
 
+/**  Update Ticket*/
+
 const updateTicket = async(req, res) => {
     res.json({
         message: `Ticket PUT: ${req.params.id}`
     })
 }
-
-
-
 
 module.exports = {
     createTicket,

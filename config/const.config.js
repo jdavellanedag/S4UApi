@@ -1,3 +1,3 @@
 module.exports = {
-    rootPath: '/v1/s4uapi'
+    rootPath: '/v1/s4u-api'
 }

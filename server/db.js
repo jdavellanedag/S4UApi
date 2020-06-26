@@ -15,7 +15,7 @@ class Database {
             useFindAndModify: false
         }, (err, res) => {
             if (err) throw err;
-            console.log('Base de datos ONLINE');
+            console.log('DataBase ONLINE');
         })
     }
 

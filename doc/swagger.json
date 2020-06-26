@@ -16,11 +16,11 @@
         "version": "0.0.1"
     },
     "servers": [{
-            "url": "http://localhost:3001/v1/s4uapi",
+            "url": "http://localhost:3001/v1/s4u-api",
             "description": "Local Dev Server"
         },
         {
-            "url": "https://s4uapi.herokuapp.com/v1/s4uapi",
+            "url": "https://s4uapi.herokuapp.com/v1/s4u-api",
             "description": "Cloud Dev Server"
         }
     ],
